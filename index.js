@@ -10,8 +10,8 @@ const { writeToFile, initResultFolder, processRawCards } = require("./utils");
   const fetchedData = await page.evaluate(_ => { return data });
   const { whiteCards, blackCards } = fetchedData
 
-  const wCards = processRawCards(whiteCards, 'white')
-  const bCards = processRawCards(blackCards, 'black')
+  const wCards = processRawCards(whiteCards, 'white', 'en')
+  const bCards = processRawCards(blackCards, 'black', 'en')
   
   writeToFile('cards_data.json', [...wCards, ...bCards])
   console.log('Finish processing data!!')
