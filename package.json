@@ -1,0 +1,10 @@
+{
+  "name": "scape-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mocmeo <vdev.lamnn@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.17.0"
+  }
+}
