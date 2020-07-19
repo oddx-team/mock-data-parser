@@ -23,7 +23,7 @@ const processRawCards = (data, color) => {
       result.push({
         color,
         text: item.text,
-        ...(item.pick && {gaps: item.pick}),
+        ...(item.pick && item.pick <= 2 && {gaps: item.pick}),
       });
     }
 	});
