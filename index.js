@@ -13,7 +13,7 @@ const { writeToFile, initResultFolder, processRawCards } = require("./utils");
   const wCards = processRawCards(whiteCards, 'white', 'en')
   const bCards = processRawCards(blackCards, 'black', 'en')
   
-  writeToFile('cards_data.json', [...wCards, ...bCards])
+  writeToFile('cards_data.json', [...wCards, ...bCards].sort(() => Math.random() - 0.5))
   console.log('Finish processing data!!')
   await browser.close();
 })();

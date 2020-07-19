@@ -18,7 +18,7 @@ const initResultFolder = () => {
 
 const processRawCards = (data, color, language) => {
   let result = [];
-	Object.values(data).map((item, _) => {
+	Object.values(data).slice(0, 100).map((item, _) => {
     if (item.text.length <= MAX_LENGTH) {
       result.push({
 				color, 
